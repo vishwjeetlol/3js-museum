@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Museum of Three.js • Nepo Baby Magazine</title>
+    <!-- Google Fonts for font slots & fallbacks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --brand-green: #BDFF52;
+        --brand-pink: #CF005E;
+        --brand-pastel-pink: #FC94C3;
+        --brand-aqua: #5CE1E6;
+        --brand-yellow: #FFDE59;
+        --black: #000000;
+        --white: #FFFFFF;
+
+        /* Font Slots */
+        --font-bootzy: 'Bootzy', 'Space Grotesk', Impact, sans-serif;
+        --font-defonte: 'DeFonte', 'Syne', 'Trebuchet MS', sans-serif;
+        --font-sf: 'SF Pro', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-sf-mono: 'SF Mono', 'Space Mono', 'Courier New', monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        user-select: none;
+      }
+
+      body {
+        background-color: var(--black);
+        color: var(--white);
+        font-family: var(--font-sf);
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100vh;
+      }
+
+      #webgl-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        outline: none;
+        display: block;
+      }
+
+      /* Scroll Dummy to give vertical scroll distance */
+      #scroll-container {
+        position: relative;
+        width: 100%;
+        height: 25000px; /* Long scroll track for 22 exhibits + lobby + gift shop */
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* HUD Top Nav Bar */
+      #hud-header {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 18px;
+        background: rgba(0, 0, 0, 0.9);
+        border: 3px solid var(--brand-green);
+        box-shadow: 4px 4px 0px var(--brand-green);
+        border-radius: 8px;
+        pointer-events: auto;
+      }
+
+      .logo-slot-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-slot {
+        height: 38px;
+        background: var(--brand-pink);
+        padding: 4px 10px;
+        border: 2px solid var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-slot span {
+        font-family: var(--font-bootzy);
+        font-weight: 900;
+        font-size: 13px;
+        color: var(--white);
+        letter-spacing: 0.5px;
+      }
+
+      .hud-title-wrap {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hud-title {
+        font-family: var(--font-defonte);
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--brand-yellow);
+        letter-spacing: 1px;
+      }
+
+      .hud-subtitle {
+        font-family: var(--font-sf-mono);
+        font-size: 11px;
+        color: var(--brand-pastel-pink);
+      }
+
+      .hud-controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .btn-y2k {
+        background: var(--brand-yellow);
+        color: var(--black);
+        font-family: var(--font-bootzy);
+        font-weight: 900;
+        font-size: 12px;
+        padding: 6px 14px;
+        border: 2px solid var(--black);
+        box-shadow: 2px 2px 0px var(--black);
+        cursor: pointer;
+        transition: transform 0.08s ease, box-shadow 0.08s ease;
+      }
+
+      .btn-y2k:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: 4px 4px 0px var(--brand-pink);
+      }
+
+      .btn-y2k:active {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0px;
+      }
+
+      .btn-y2k:focus-visible {
+        outline: 3px solid var(--brand-yellow);
+        outline-offset: 2px;
+      }
+
+      .btn-aqua {
+        background: var(--brand-aqua);
+      }
+
+      .btn-pink {
+        background: var(--brand-pink);
+        color: var(--white);
+      }
+
+      .btn-green {
+        background: var(--brand-green);
+      }
+
+      /* Audio Guide Bar at Bottom */
+      #audio-guide-bar {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.95);
+        border: 3px solid var(--brand-pink);
+        box-shadow: 4px 4px 0px var(--brand-pink);
+        padding: 12px 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        pointer-events: auto;
+      }
+
+      .audio-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .plaque-num {
+        font-family: var(--font-defonte);
+        font-size: 14px;
+        font-weight: 800;
+        background: var(--brand-pink);
+        color: var(--white);
+        padding: 4px 10px;
+        border: 2px solid var(--black);
+      }
+
+      .audio-text h3 {
+        font-family: var(--font-bootzy);
+        font-size: 15px;
+        color: var(--brand-yellow);
+      }
+
+      .audio-text p {
+        font-family: var(--font-sf-mono);
+        font-size: 13px;
+        color: var(--white);
+      }
+
+      /* Focus Mode Overlay */
+      #focus-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        background: transparent;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        pointer-events: none;
+      }
+
+      #focus-overlay.active {
+        display: flex;
+      }
+
+      .focus-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.92);
+        border: 3px solid var(--brand-aqua);
+        box-shadow: 4px 4px 0px var(--brand-aqua);
+        padding: 10px 18px;
+        border-radius: 8px;
+        pointer-events: auto;
+      }
+
+      .focus-title {
+        font-family: var(--font-defonte);
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--brand-aqua);
+        letter-spacing: 1px;
+      }
+
+      .focus-telemetry {
+        font-family: var(--font-sf-mono);
+        font-size: 12px;
+        color: var(--brand-green);
+        background: var(--black);
+        padding: 6px 12px;
+        border: 2px solid var(--brand-pastel-pink);
+      }
+
+      .focus-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100%;
+        padding-top: 16px;
+        pointer-events: none;
+      }
+
+      .focus-instructions {
+        width: 360px;
+        background: var(--white);
+        color: var(--black);
+        padding: 18px;
+        border: 4px solid var(--black);
+        box-shadow: 6px 6px 0px var(--brand-pink);
+        pointer-events: auto;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .focus-instructions.hidden {
+        display: none !important;
+      }
+
+      .instructions-toggle-pill {
+        position: fixed;
+        bottom: 24px;
+        left: 24px;
+        z-index: 25;
+        pointer-events: auto;
+      }
+
+      .focus-instructions h4 {
+        font-family: var(--font-defonte);
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: var(--brand-pink);
+      }
+
+      .focus-instructions p {
+        font-family: var(--font-sf);
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .focus-instructions .controls-hint {
+        font-family: var(--font-sf-mono);
+        font-size: 11px;
+        background: var(--white);
+        padding: 8px;
+        border: 2px solid var(--black);
+      }
+
+      .focus-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
+      }
+
+      /* Minimap Modal */
+      #minimap-modal {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        width: 360px;
+        background: var(--black);
+        border: 4px solid var(--brand-green);
+        box-shadow: 8px 8px 0px var(--brand-pink);
+        padding: 16px;
+        z-index: 30;
+        display: none;
+      }
+
+      #minimap-modal.open {
+        display: block;
+      }
+
+      .minimap-list {
+        max-height: 380px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 12px;
+      }
+
+      .minimap-item {
+        font-family: var(--font-sf-mono);
+        font-size: 11px;
+        padding: 6px 10px;
+        background: var(--black);
+        border: 1px solid var(--brand-green);
+        border-left: 4px solid var(--brand-green);
+        color: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .minimap-item:hover {
+        background: var(--brand-yellow);
+        color: var(--black);
+        border-left-color: var(--black);
+      }
+
+      /* Plain List Fallback View */
+      #fallback-view {
+        position: fixed;
+        inset: 0;
+        background: var(--black);
+        z-index: 50;
+        padding: 40px;
+        overflow-y: auto;
+        display: none;
+      }
+
+      #fallback-view.open {
+        display: block;
+      }
+
+      .fallback-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 4px solid var(--brand-green);
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      .fallback-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+      }
+
+      .fallback-card {
+        background: var(--white);
+        color: var(--black);
+        border: 4px solid var(--black);
+        box-shadow: 6px 6px 0px var(--brand-green);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Gift Shop Modal / Drawer */
+      #gift-shop-drawer {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 420px;
+        background: var(--black);
+        border: 4px solid var(--brand-yellow);
+        box-shadow: 6px 6px 0px var(--brand-yellow);
+        padding: 20px;
+        z-index: 25;
+        display: none;
+      }
+
+      #gift-shop-drawer.open {
+        display: block;
+      }
+
+      .shop-state-banner {
+        font-family: var(--font-sf-mono);
+        font-size: 12px;
+        font-weight: bold;
+        padding: 6px 10px;
+        margin-bottom: 12px;
+        text-align: center;
+        border: 2px solid var(--black);
+      }
+
+      .shop-open {
+        background: var(--brand-green);
+        color: var(--black);
+      }
+
+      .shop-closed {
+        background: var(--brand-pink);
+        color: var(--white);
+      }
+
+      .news-input {
+        width: 100%;
+        padding: 10px;
+        background: var(--white);
+        border: 2px solid var(--black);
+        font-family: var(--font-sf-mono);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      /* Reduced motion mode */
+      body.reduced-motion * {
+        transition: none !important;
+        animation: none !important;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DPi1QeAo.js"></script>
+  </head>
+  <body>
+    <!-- Three.js Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Scroll Track -->
+    <div id="scroll-container"></div>
+
+    <!-- HUD Header -->
+    <header id="hud-header">
+      <div class="logo-slot-wrap">
+        <div class="logo-slot" title="Logo Slot: Untouched">
+          <span>NEPO BABY MAGAZINE</span>
+        </div>
+        <div class="hud-title-wrap">
+          <span class="hud-title">THE MUSEUM OF THREE.JS</span>
+          <span class="hud-subtitle">WASD / ARROWS TO WALK • CLICK OR [TEST IT] TO INTERACT</span>
+        </div>
+      </div>
+      <div class="hud-controls">
+        <button id="btn-reduced-motion" class="btn-y2k btn-aqua" title="Toggle Smooth / Stepwise Movement">MOTION: SMOOTH</button>
+        <button id="btn-minimap" class="btn-y2k btn-green">RADAR [M]</button>
+        <button id="btn-gift-shop" class="btn-y2k btn-pink">GIFT SHOP [G]</button>
+        <button id="btn-fallback" class="btn-y2k">PLAIN LIST</button>
+      </div>
+    </header>
+
+    <!-- Audio Guide Bar at Bottom -->
+    <footer id="audio-guide-bar">
+      <div class="audio-info">
+        <div class="plaque-num" id="hud-plaque-num">№ 00</div>
+        <div class="audio-text">
+          <h3 id="hud-exhibit-title">GRAND ROTUNDA LOBBY</h3>
+          <p id="hud-exhibit-desc">Scroll down or press ↓ to advance through Wing A, B, C and the Gift Shop.</p>
+        </div>
+      </div>
+      <div class="audio-action">
+        <button id="btn-test-it" class="btn-y2k btn-green" style="font-size: 14px; padding: 10px 22px;">TEST IT [ENTER]</button>
+      </div>
+    </footer>
+
+    <!-- Focus Mode Overlay HUD -->
+    <div id="focus-overlay" role="dialog" aria-modal="true" aria-label="Exhibit Focus View">
+      <div class="focus-top">
+        <div>
+          <h2 class="focus-title" id="focus-title">EXHIBIT TEST BENCH</h2>
+          <span style="font-family: var(--font-sf-mono); font-size: 12px; color: var(--brand-yellow);" id="focus-wing">WING A</span>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <div class="focus-telemetry" id="focus-fps">FPS: 60 • 14 DRAW CALLS</div>
+          <button id="btn-exit-focus" class="btn-y2k btn-pink" style="font-size: 14px;">ESC — RETURN TO WALKWAY</button>
+        </div>
+      </div>
+      <div class="focus-main">
+        <div class="focus-instructions" id="focus-instructions-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h4 id="focus-inst-header" style="margin: 0;">TEST INSTRUCTIONS</h4>
+            <button id="btn-hide-instructions" class="btn-y2k" style="padding: 2px 8px; font-size: 11px;">HIDE [H]</button>
+          </div>
+          <p id="focus-inst-text">Click and drag canvas to rotate, mouse wheel to zoom.</p>
+          <div class="controls-hint" id="focus-controls-hint">
+            <strong>CONTROLS:</strong> [W/S] Zoom In/Out • [A/D] Orbit • Drag Mouse to Rotate • [H] Hide/Show • [ESC] Return
+          </div>
+        </div>
+        <button id="btn-show-instructions" class="btn-y2k btn-green instructions-toggle-pill" style="display: none;">SHOW INSTRUCTIONS [H]</button>
+        <div class="focus-actions" id="focus-custom-controls">
+          <!-- Dynamic exhibit action buttons injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimap Radar Modal -->
+    <div id="minimap-modal" role="dialog" aria-modal="true" aria-label="Museum Radar Minimap">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--brand-green); padding-bottom: 8px;">
+        <span style="font-family: var(--font-bootzy); color: var(--brand-green); font-size: 14px;">MUSEUM RADAR</span>
+        <button id="btn-close-minimap" class="btn-y2k" style="padding: 2px 8px;">✕</button>
+      </div>
+      <div class="minimap-list" id="minimap-items">
+        <!-- Injected via exhibits.json -->
+      </div>
+    </div>
+
+    <!-- Gift Shop Drawer -->
+    <div id="gift-shop-drawer" role="dialog" aria-modal="true" aria-label="Nepo Baby Gift Shop">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--brand-yellow); padding-bottom: 8px; margin-bottom: 12px;">
+        <span style="font-family: var(--font-bootzy); color: var(--brand-yellow); font-size: 16px;">NEPO BABY GIFT SHOP</span>
+        <button id="btn-close-gift-shop" class="btn-y2k" style="padding: 2px 8px;">✕</button>
+      </div>
+      <div id="shop-banner" class="shop-state-banner shop-open">
+        ● SALES OPEN: LIMITED EDITION RUN LIVE
+      </div>
+      <div style="font-size: 12px; margin-bottom: 12px; font-family: var(--font-sf-mono); color: var(--white);">
+        Available Drops: Cassette Mixtape ($18), Embroidered Cap ($32), Sticker Pack ($9).
+      </div>
+      <form id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Nepo Baby Dispatch!');">
+        <label style="display: block; font-family: var(--font-bootzy); font-size: 13px; color: var(--brand-green); margin-bottom: 4px;">JOIN THE DISPATCH:</label>
+        <input type="email" class="news-input" placeholder="your.name@domain.xyz" required />
+        <button type="submit" class="btn-y2k btn-green" style="width: 100%;">TRANSMIT TO DISPATCH LIST</button>
+      </form>
+      <div style="margin-top: 14px; text-align: center;">
+        <button id="btn-toggle-shop-state" class="btn-y2k btn-aqua" style="font-size: 10px; padding: 4px 10px;">CONFIG: TOGGLE OPEN/CLOSED STATE</button>
+      </div>
+    </div>
+
+    <!-- Fallback Plain List Accessible View -->
+    <div id="fallback-view">
+      <div class="fallback-header">
+        <div>
+          <h1 style="font-family: var(--font-bootzy); font-size: 28px; color: var(--brand-green);">THE MUSEUM OF THREE.JS — EXHIBIT CATALOG</h1>
+          <p style="font-family: var(--font-sf-mono); color: var(--brand-yellow);">Plain List Fallback for Screen Readers & Low-Spec Hardware</p>
+        </div>
+        <button id="btn-close-fallback" class="btn-y2k btn-pink">RETURN TO 3D EXHIBITION</button>
+      </div>
+      <div class="fallback-grid" id="fallback-grid">
+        <!-- Rendered via exhibits.json -->
+      </div>
+    </div>
+
+  </body>
+</html>

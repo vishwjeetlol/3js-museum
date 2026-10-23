@@ -1,0 +1,2731 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "SnjWk",
+      "x": 0,
+      "y": 0,
+      "name": "Museum Design System & Components",
+      "width": 2200,
+      "height": 900,
+      "fill": "#0A0A0E",
+      "gap": 40,
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "dvKWI",
+          "name": "Component: Test It Button",
+          "reusable": true,
+          "fill": "$brandYellow",
+          "cornerRadius": 999,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$black",
+            "offset": {
+              "x": 4,
+              "y": 4
+            }
+          },
+          "gap": 8,
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "d95bm",
+              "name": "Play Icon",
+              "width": 18,
+              "height": 18,
+              "icon": "play",
+              "library": "lucide",
+              "fill": "$black"
+            },
+            {
+              "type": "text",
+              "id": "o4ioPu",
+              "name": "Label",
+              "fill": "$black",
+              "content": "TEST IT",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 16,
+              "fontWeight": "900"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "H3tUL",
+          "name": "Component: Wall Label",
+          "reusable": true,
+          "width": 320,
+          "fill": "$white",
+          "stroke": "$black",
+          "strokeWidth": 4,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandPink",
+            "offset": {
+              "x": 6,
+              "y": 6
+            }
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "RzS3d",
+              "name": "Plaque Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GyBLi",
+                  "name": "Audio Guide Number",
+                  "fill": "$brandPink",
+                  "content": "№ 01 • AUDIO 104.2",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "icon",
+                  "id": "yeBij",
+                  "name": "Headphone Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "headphones",
+                  "library": "lucide",
+                  "fill": "$black"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "O1bVCN",
+              "name": "Exhibit Title",
+              "fill": "$black",
+              "content": "3D ROTATING MAGAZINE",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 20,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "Fv6mF",
+              "name": "Exhibit Medium",
+              "fill": "#555555",
+              "content": "Three.js r128 • GLTF / Custom Shaders • 2024",
+              "fontFamily": "Space Mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "oPTfE",
+              "name": "Curator Note",
+              "fill": "$black",
+              "content": "Loan collection reconstruction. High-gloss laminated holographic paper finish on procedural plinth.",
+              "lineHeight": 1.4,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "l0cCOy",
+          "name": "Component: Velvet Rope Barrier",
+          "reusable": true,
+          "width": 280,
+          "height": 160,
+          "justifyContent": "space_between",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "q1qfo",
+              "name": "Stanchion Left",
+              "layout": "vertical",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "SY6AF",
+                  "name": "Finial",
+                  "fill": "$brandYellow",
+                  "width": 24,
+                  "height": 24,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                },
+                {
+                  "type": "rectangle",
+                  "id": "IsoN7",
+                  "name": "Pole",
+                  "fill": "$brandYellow",
+                  "width": 8,
+                  "height": 110,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 4,
+                  "id": "zeXcN",
+                  "name": "Base",
+                  "fill": "$brandYellow",
+                  "width": 36,
+                  "height": 12,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 7,
+              "id": "F9BK6F",
+              "name": "Velvet Swag",
+              "fill": "$brandPink",
+              "width": 180,
+              "height": 14,
+              "stroke": "$black",
+              "strokeWidth": 2
+            },
+            {
+              "type": "frame",
+              "id": "lYiBO",
+              "name": "Stanchion Right",
+              "layout": "vertical",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "JBEpY",
+                  "name": "Finial",
+                  "fill": "$brandYellow",
+                  "width": 24,
+                  "height": 24,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                },
+                {
+                  "type": "rectangle",
+                  "id": "cugpw",
+                  "name": "Pole",
+                  "fill": "$brandYellow",
+                  "width": 8,
+                  "height": 110,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 4,
+                  "id": "vhl3o",
+                  "name": "Base",
+                  "fill": "$brandYellow",
+                  "width": 36,
+                  "height": 12,
+                  "stroke": "$black",
+                  "strokeWidth": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dIEOM",
+          "name": "Component: Museum Minimap",
+          "reusable": true,
+          "width": 320,
+          "fill": "$black",
+          "cornerRadius": 12,
+          "stroke": "$brandGreen",
+          "strokeWidth": 3,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandGreen",
+            "offset": {
+              "x": 4,
+              "y": 4
+            }
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "VczES",
+              "name": "Minimap Title Bar",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rhtg2",
+                  "name": "Title",
+                  "fill": "$brandGreen",
+                  "content": "MUSEUM RADAR // FLOOR PLAN",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "H8W7OT",
+                  "name": "Live Ping",
+                  "fill": "$brandYellow",
+                  "content": "• LIVE",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 11,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "y5RqWt",
+              "name": "Floor Plan Nodes",
+              "width": "fill_container",
+              "fill": "#14141A",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "G3SdzL",
+                  "name": "Wing 00",
+                  "width": "fill_container",
+                  "fill": "#1E1E26",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "udqwa",
+                      "name": "Wing Label",
+                      "fill": "$white",
+                      "content": "00 LOBBY & ARCHIVE",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c0fAl",
+                      "name": "Wing Detail",
+                      "fill": "#AAAAAA",
+                      "content": "Start / Directory",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wlwAK",
+                  "name": "Wing 01-11",
+                  "width": "fill_container",
+                  "fill": "#1E1E26",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "O3jzvR",
+                      "name": "Wing Label",
+                      "fill": "$brandGreen",
+                      "content": "01-11 WING A: LOAN RECONSTRUCTIONS",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jd1Is",
+                      "name": "Wing Detail",
+                      "fill": "#AAAAAA",
+                      "content": "Magazines, Jewel Case, PCO",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "U7ocar",
+                  "name": "Wing 12-14",
+                  "width": "fill_container",
+                  "fill": "#1E1E26",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "t1OoO",
+                      "name": "Wing Label",
+                      "fill": "$brandPink",
+                      "content": "12-14 WING B: MADE IN THIS CHAT",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "M8Gmi",
+                      "name": "Wing Detail",
+                      "fill": "#AAAAAA",
+                      "content": "Singularity, Feed, Coupe Run",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "p19vLE",
+                  "name": "Wing 15-22",
+                  "width": "fill_container",
+                  "fill": "#1E1E26",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vEBeA",
+                      "name": "Wing Label",
+                      "fill": "$brandAqua",
+                      "content": "15-22 WING C: SHORTLISTED CONCEPTS",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YRjVo",
+                      "name": "Wing Detail",
+                      "fill": "#AAAAAA",
+                      "content": "Dial-up, T9, iMac, Boombox",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ciArF",
+                  "name": "Wing 23",
+                  "width": "fill_container",
+                  "fill": "#1E1E26",
+                  "cornerRadius": 4,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sTxrq",
+                      "name": "Wing Label",
+                      "fill": "$brandYellow",
+                      "content": "23 GIFT SHOP & NEWSLETTER",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "I7hAZ",
+                      "name": "Wing Detail",
+                      "fill": "#AAAAAA",
+                      "content": "Merch / Drops / Sign-up",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C3kY2q",
+          "name": "Component: Focus Overlay HUD",
+          "reusable": true,
+          "width": 440,
+          "fill": "#0A0A0ECC",
+          "cornerRadius": 16,
+          "stroke": "$brandAqua",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "wRkjo",
+              "name": "HUD Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VPkps",
+                  "name": "Focus Mode Indicator",
+                  "fill": "$brandAqua",
+                  "content": "FOCUS TEST MODE ACTIVE",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "frame",
+                  "id": "C661R",
+                  "name": "Exit Badge",
+                  "fill": "$brandPink",
+                  "cornerRadius": 6,
+                  "stroke": "$black",
+                  "strokeWidth": 1,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qB8vG",
+                      "name": "Esc Label",
+                      "fill": "$white",
+                      "content": "ESC TO RETURN",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dHkqg",
+              "name": "Telemetry Bar",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "t2cQvk",
+                  "name": "FPS Meter",
+                  "fill": "$brandGreen",
+                  "content": "FPS: 60.0 • DRAW CALLS: 14 • MEM: 38MB",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "OnAvg",
+              "name": "Test Controls Prompt",
+              "fill": "$white",
+              "content": "CONTROLS: Left Drag to Orbit • Scroll to Zoom • Click hotspot to Trigger • ESC to resume walk",
+              "lineHeight": 1.4,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "WYvKU",
+      "x": 0,
+      "y": 1000,
+      "name": "Desktop - Lobby",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#0B0B10",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "STCpK",
+          "x": 0,
+          "y": 650,
+          "name": "Terrazzo Checker Floor",
+          "fill": "#181822",
+          "width": 1440,
+          "height": 250,
+          "stroke": "$brandGreen",
+          "strokeWidth": {
+            "top": 4
+          }
+        },
+        {
+          "type": "frame",
+          "id": "uEC4y",
+          "x": 40,
+          "y": 30,
+          "name": "Top Bar",
+          "width": 1360,
+          "height": 70,
+          "fill": "$black",
+          "cornerRadius": 12,
+          "stroke": "$brandGreen",
+          "strokeWidth": 3,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandGreen",
+            "offset": {
+              "x": 4,
+              "y": 4
+            }
+          },
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bn7UU",
+              "name": "[LOGO SLOT - UNTOUCHED]",
+              "fill": "$brandPink",
+              "cornerRadius": 6,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "padding": [
+                6,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xmkAb",
+                  "name": "Slot Text",
+                  "fill": "$white",
+                  "content": "NEPO BABY LOGO SLOT",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "X01xtl",
+              "name": "Museum Header Info",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bza2f",
+                  "name": "Main Title",
+                  "fill": "$brandYellow",
+                  "content": "THE MUSEUM OF THREE.JS",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 18,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "h3qcRj",
+                  "name": "Issue Tag",
+                  "fill": "#AAAAAA",
+                  "content": "• VOL. 04 / INTERACTIVE PAVILION",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nFkiB",
+              "name": "Nav Right Controls",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Xdfn0",
+                  "name": "Minimap Pill",
+                  "fill": "$brandAqua",
+                  "cornerRadius": 20,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "gap": 6,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "b3BFe",
+                      "name": "Map Icon",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "map",
+                      "library": "lucide",
+                      "fill": "$black"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j8JDul",
+                      "name": "Map Label",
+                      "fill": "$black",
+                      "content": "RADAR [M]",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ellipse",
+          "id": "djAA4",
+          "x": 470,
+          "y": 620,
+          "name": "Floor Spotlight Glow",
+          "fill": "#BDFF5233",
+          "width": 500,
+          "height": 120
+        },
+        {
+          "type": "frame",
+          "id": "b6mfFX",
+          "x": 520,
+          "y": 430,
+          "name": "Lobby Monument Plinth",
+          "width": 400,
+          "height": 250,
+          "fill": "$white",
+          "stroke": "$black",
+          "strokeWidth": 6,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$black",
+            "offset": {
+              "x": 10,
+              "y": 10
+            }
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "RhTkT",
+          "x": 570,
+          "y": 220,
+          "name": "Glass Vitrine Cube",
+          "width": 300,
+          "height": 200,
+          "fill": "#5CE1E622",
+          "stroke": "$brandAqua",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "gap": 10,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "hl8t8",
+              "name": "Diamond Icon",
+              "width": 48,
+              "height": 48,
+              "icon": "sparkles",
+              "library": "lucide",
+              "fill": "$brandYellow"
+            },
+            {
+              "type": "text",
+              "id": "L9und2",
+              "name": "Vitrine Label",
+              "fill": "$brandYellow",
+              "content": "EXHIBITION PREVIEW // 22 WORKS",
+              "fontFamily": "Space Mono",
+              "fontSize": 12,
+              "fontWeight": "bold"
+            }
+          ]
+        },
+        {
+          "id": "iZcZ5",
+          "type": "ref",
+          "ref": "l0cCOy",
+          "x": 220,
+          "y": 520,
+          "name": "Lobby Barrier Left"
+        },
+        {
+          "id": "AXUvQ",
+          "type": "ref",
+          "ref": "l0cCOy",
+          "x": 940,
+          "y": 520,
+          "name": "Lobby Barrier Right"
+        },
+        {
+          "id": "SGNJC",
+          "type": "ref",
+          "ref": "H3tUL",
+          "x": 80,
+          "y": 240,
+          "name": "Lobby Introduction Plaque"
+        },
+        {
+          "type": "frame",
+          "id": "FIJiN",
+          "x": 580,
+          "y": 770,
+          "name": "Scroll Indicator Badge",
+          "width": 280,
+          "height": 54,
+          "fill": "$brandGreen",
+          "cornerRadius": 999,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$black",
+            "offset": {
+              "x": 4,
+              "y": 4
+            }
+          },
+          "gap": 12,
+          "padding": [
+            10,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "kng7R",
+              "name": "Scroll Arrow",
+              "width": 20,
+              "height": 20,
+              "icon": "arrow-down",
+              "library": "lucide",
+              "fill": "$black"
+            },
+            {
+              "type": "text",
+              "id": "FW9GZ",
+              "name": "Scroll Text",
+              "fill": "$black",
+              "content": "SCROLL TO ENTER WING A",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 14,
+              "fontWeight": "900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hp9zr",
+      "x": 1540,
+      "y": 1000,
+      "name": "Desktop - Wing Hallway",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#08080C",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "cfAk4",
+          "x": 0,
+          "y": 0,
+          "name": "Wing A Lime Feature Wall",
+          "opacity": 0.12,
+          "fill": "$brandGreen",
+          "width": 600,
+          "height": 650
+        },
+        {
+          "type": "rectangle",
+          "id": "CYfl4",
+          "x": 0,
+          "y": 650,
+          "name": "Terrazzo Gallery Floor",
+          "fill": "#121218",
+          "width": 1440,
+          "height": 250,
+          "stroke": "$brandGreen",
+          "strokeWidth": {
+            "top": 4
+          }
+        },
+        {
+          "type": "frame",
+          "id": "pS4OV",
+          "x": 950,
+          "y": 120,
+          "name": "Archway to Wing B",
+          "width": 440,
+          "height": 530,
+          "fill": "#CF005E15",
+          "stroke": "$brandPink",
+          "strokeWidth": 6,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Qbqbe",
+              "name": "Archway Sign",
+              "fill": "$brandPink",
+              "content": "WING B PORTAL →",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 22,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "kiQQ6",
+              "name": "Archway Desc",
+              "fill": "$brandPastelPink",
+              "content": "MADE IN THIS CHAT // SINGULARITY & FEED",
+              "fontFamily": "Space Mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pQAwB",
+          "x": 40,
+          "y": 30,
+          "name": "Hallway Header",
+          "width": 1360,
+          "height": 60,
+          "fill": "$black",
+          "cornerRadius": 8,
+          "stroke": "$brandGreen",
+          "strokeWidth": 2,
+          "padding": [
+            10,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "pIvWt",
+              "name": "Location Breadcrumb",
+              "fill": "$brandGreen",
+              "content": "THE MUSEUM • WING A: LOAN RECONSTRUCTIONS [01/11]",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 15,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "RA2I4",
+              "name": "Nav Instructions",
+              "fill": "$brandYellow",
+              "content": "↑/↓ SCROLL TO WALK • CLICK EXHIBIT OR [TEST IT] TO INTERACT",
+              "fontFamily": "Space Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "g7fEy",
+          "x": 440,
+          "y": 450,
+          "name": "Exhibit Plinth 01",
+          "width": 360,
+          "height": 230,
+          "fill": "$white",
+          "stroke": "$black",
+          "strokeWidth": 5,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$black",
+            "offset": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "kTvR8",
+              "name": "Plinth Number",
+              "fill": "#666666",
+              "content": "PLINTH 01",
+              "fontFamily": "Space Mono",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cbKm0",
+          "x": 480,
+          "y": 200,
+          "name": "Magazine 3D Model Proxy",
+          "width": 280,
+          "height": 210,
+          "fill": "$brandPink",
+          "cornerRadius": 8,
+          "stroke": "$black",
+          "strokeWidth": 4,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandYellow",
+            "offset": {
+              "x": 10,
+              "y": 10
+            }
+          },
+          "layout": "vertical",
+          "padding": 16,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "EzdLD",
+              "name": "Mag Issue",
+              "fill": "$white",
+              "content": "NEPO BABY #04",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 20,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "nva79",
+              "name": "Mag Cover Sub",
+              "fill": "$brandYellow",
+              "content": "SPECIAL ISSUE: THE THREE.JS RETROSPECTIVE",
+              "fontFamily": "Space Mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "ellipse",
+          "id": "aP2Oh",
+          "x": 420,
+          "y": 630,
+          "name": "Magazine Plinth Spotlight",
+          "fill": "#FFDE5933",
+          "width": 400,
+          "height": 90
+        },
+        {
+          "id": "l2ZDKv",
+          "type": "ref",
+          "ref": "dvKWI",
+          "x": 550,
+          "y": 380,
+          "name": "Floating Test It CTA"
+        },
+        {
+          "id": "nNd8o",
+          "type": "ref",
+          "ref": "l0cCOy",
+          "x": 480,
+          "y": 570,
+          "name": "Exhibit 01 Rope Barrier"
+        },
+        {
+          "id": "fkU6J",
+          "type": "ref",
+          "ref": "H3tUL",
+          "x": 60,
+          "y": 240,
+          "name": "Wall Plaque Exhibit 01"
+        },
+        {
+          "id": "iPDnt",
+          "type": "ref",
+          "ref": "dIEOM",
+          "x": 1080,
+          "y": 110,
+          "name": "HUD Minimap Instance"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "EXh8e",
+      "x": 3080,
+      "y": 1000,
+      "name": "Desktop - Exhibit Focus Mode",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#050508",
+      "layout": "none",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "oHCpd",
+          "x": 200,
+          "y": 150,
+          "name": "Backlight Glow Left",
+          "fill": "#BDFF5215",
+          "width": 600,
+          "height": 600
+        },
+        {
+          "type": "ellipse",
+          "id": "z2O3K",
+          "x": 700,
+          "y": 100,
+          "name": "Backlight Glow Right",
+          "fill": "#CF005E15",
+          "width": 700,
+          "height": 700
+        },
+        {
+          "type": "frame",
+          "id": "buMlH",
+          "x": 420,
+          "y": 140,
+          "name": "Interactive Exhibit Focus Viewport",
+          "width": 620,
+          "height": 620,
+          "fill": "#12121C",
+          "cornerRadius": 16,
+          "stroke": "$brandAqua",
+          "strokeWidth": 3,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandAqua",
+            "offset": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "layout": "vertical",
+          "padding": 24,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VkONt",
+              "name": "Viewport Telemetry Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FUP9m",
+                  "name": "Camera Angle",
+                  "fill": "$brandAqua",
+                  "content": "CAM: ORBIT [AZIMUTH: 42° / ELEVATION: 18°]",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "g2WfjQ",
+                  "name": "Interactive Mode Status",
+                  "fill": "$brandYellow",
+                  "content": "DIRECT TOUCH ACTIVE",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "toMPD",
+              "name": "Focused Magazine Object 3D Proxy",
+              "width": 380,
+              "height": 440,
+              "fill": "$brandPink",
+              "cornerRadius": 12,
+              "stroke": "$black",
+              "strokeWidth": 5,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 12,
+                  "y": 12
+                }
+              },
+              "layout": "vertical",
+              "padding": 24,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YsKDy",
+                  "name": "Focus Mag Logo",
+                  "fill": "$brandYellow",
+                  "content": "NEPO BABY",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 32,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "zztNy",
+                  "name": "Feature Title",
+                  "fill": "$white",
+                  "content": "EXHIBIT 01: REALTIME SHADER LAMINATION",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "aU32c",
+                  "name": "Interaction Hint",
+                  "fill": "$brandAqua",
+                  "content": "CLICK & DRAG TO SPIN • WHEEL TO ZOOM PAGE",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v8chNn",
+              "name": "Interactive Control Pills",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GmQao",
+                  "name": "Control FRONT",
+                  "fill": "$brandYellow",
+                  "cornerRadius": 999,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yQIee",
+                      "name": "Label",
+                      "fill": "$black",
+                      "content": "FRONT",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V68RFg",
+                  "name": "Control SPREAD",
+                  "fill": "#222230",
+                  "cornerRadius": 999,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T4Sa3P",
+                      "name": "Label",
+                      "fill": "$white",
+                      "content": "SPREAD",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XOi4H",
+                  "name": "Control WIREFRAME",
+                  "fill": "#222230",
+                  "cornerRadius": 999,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pQkU1",
+                      "name": "Label",
+                      "fill": "$white",
+                      "content": "WIREFRAME",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o9TuYa",
+                  "name": "Control RESET CAM",
+                  "fill": "#222230",
+                  "cornerRadius": 999,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GoSOO",
+                      "name": "Label",
+                      "fill": "$white",
+                      "content": "RESET CAM",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "J3aTe5",
+          "type": "ref",
+          "ref": "H3tUL",
+          "x": 40,
+          "y": 140,
+          "name": "Focus Wall Plaque"
+        },
+        {
+          "id": "gdNIi",
+          "type": "ref",
+          "ref": "C3kY2q",
+          "x": 1060,
+          "y": 140,
+          "name": "Focus Mode HUD Instance"
+        },
+        {
+          "type": "frame",
+          "id": "SImC1",
+          "x": 40,
+          "y": 30,
+          "name": "Focus Mode Top Banner",
+          "width": 1360,
+          "height": 60,
+          "fill": "$black",
+          "cornerRadius": 12,
+          "stroke": "$brandPink",
+          "strokeWidth": 3,
+          "padding": [
+            10,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "t2z9t4",
+              "name": "Focus Banner Title",
+              "fill": "$brandPink",
+              "content": "FOCUS TESTING SUITE // EXHIBIT #01 OF 22",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 16,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "q9KytZ",
+              "name": "ESC Return Button",
+              "fill": "$brandGreen",
+              "cornerRadius": 999,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 3,
+                  "y": 3
+                }
+              },
+              "gap": 8,
+              "padding": [
+                8,
+                18
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "jR8kd",
+                  "name": "Return Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "$black"
+                },
+                {
+                  "type": "text",
+                  "id": "DCiAs",
+                  "name": "Return Text",
+                  "fill": "$black",
+                  "content": "ESC — RETURN TO WALKWAY",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "900"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xbavr",
+      "x": 4620,
+      "y": 1000,
+      "name": "Desktop - Gift Shop",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#0D0D14",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "s9iGDq",
+          "x": 0,
+          "y": 600,
+          "name": "Gift Shop Terrazzo Floor",
+          "fill": "#1A1A24",
+          "width": 1440,
+          "height": 300,
+          "stroke": "$brandYellow",
+          "strokeWidth": {
+            "top": 4
+          }
+        },
+        {
+          "type": "frame",
+          "id": "OEz8m",
+          "x": 40,
+          "y": 30,
+          "name": "Gift Shop Header",
+          "width": 1360,
+          "height": 70,
+          "fill": "$black",
+          "cornerRadius": 12,
+          "stroke": "$brandYellow",
+          "strokeWidth": 3,
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TPWc0",
+              "name": "Store Title",
+              "fill": "$brandYellow",
+              "content": "NEPO BABY KIOSK & GIFT SHOP // TERMINAL 23",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 18,
+              "fontWeight": "900"
+            },
+            {
+              "type": "frame",
+              "id": "hAa6s",
+              "name": "Sales State Badge [OPEN]",
+              "fill": "$brandGreen",
+              "cornerRadius": 999,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "gap": 8,
+              "padding": [
+                6,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "Iu5TE",
+                  "name": "Pulse Indicator",
+                  "fill": "$black",
+                  "width": 10,
+                  "height": 10
+                },
+                {
+                  "type": "text",
+                  "id": "NQOF2",
+                  "name": "Badge Text",
+                  "fill": "$black",
+                  "content": "DROP 04 LIVE // SALES OPEN",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "d6qhJl",
+              "name": "Restart Tour Button",
+              "fill": "$brandPink",
+              "cornerRadius": 999,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "gap": 6,
+              "padding": [
+                8,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T7eCI",
+                  "name": "Restart Text",
+                  "fill": "$white",
+                  "content": "↺ RESTART EXHIBITION",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TquS3",
+          "x": 40,
+          "y": 130,
+          "name": "Merchandise Display Grid",
+          "width": 860,
+          "height": 440,
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Sh7R0",
+              "name": "Product: ISSUE #04 CASSETTE TAPE",
+              "width": 270,
+              "height": 420,
+              "fill": "$white",
+              "cornerRadius": 12,
+              "stroke": "$black",
+              "strokeWidth": 4,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 6,
+                  "y": 6
+                }
+              },
+              "layout": "vertical",
+              "padding": 18,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B2VMCG",
+                  "name": "Item Preview Box",
+                  "width": "fill_container",
+                  "height": 200,
+                  "fill": "$brandGreen",
+                  "cornerRadius": 8,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "Kpzwv",
+                      "name": "Item Icon",
+                      "width": 48,
+                      "height": 48,
+                      "icon": "disc",
+                      "library": "lucide",
+                      "fill": "$black"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qLpyW",
+                      "name": "Preview Label",
+                      "fill": "$black",
+                      "content": "LIMITED 200",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "nRPSb",
+                  "name": "Product Title",
+                  "fill": "$black",
+                  "content": "ISSUE #04 CASSETTE TAPE",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "q49IW",
+                  "name": "Price Tag",
+                  "fill": "$brandPink",
+                  "content": "$18.00",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "xYzLb",
+                  "name": "Add to Bag Button",
+                  "width": "fill_container",
+                  "fill": "$black",
+                  "cornerRadius": 6,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SIJiA",
+                      "name": "Buy Text",
+                      "fill": "$brandYellow",
+                      "content": "PURCHASE ITEM",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dKOjP",
+              "name": "Product: Y2K COUPE EMBROIDERED CAP",
+              "width": 270,
+              "height": 420,
+              "fill": "$white",
+              "cornerRadius": 12,
+              "stroke": "$black",
+              "strokeWidth": 4,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 6,
+                  "y": 6
+                }
+              },
+              "layout": "vertical",
+              "padding": 18,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MckZX",
+                  "name": "Item Preview Box",
+                  "width": "fill_container",
+                  "height": 200,
+                  "fill": "$brandPastelPink",
+                  "cornerRadius": 8,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mEnDv",
+                      "name": "Item Icon",
+                      "width": 48,
+                      "height": 48,
+                      "icon": "sparkles",
+                      "library": "lucide",
+                      "fill": "$black"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hdNqE",
+                      "name": "Preview Label",
+                      "fill": "$black",
+                      "content": "IN STOCK",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "TsPE5",
+                  "name": "Product Title",
+                  "fill": "$black",
+                  "content": "Y2K COUPE EMBROIDERED CAP",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "iOIwt",
+                  "name": "Price Tag",
+                  "fill": "$brandPink",
+                  "content": "$32.00",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "cKppG",
+                  "name": "Add to Bag Button",
+                  "width": "fill_container",
+                  "fill": "$black",
+                  "cornerRadius": 6,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x7989",
+                      "name": "Buy Text",
+                      "fill": "$brandYellow",
+                      "content": "PURCHASE ITEM",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sNggw",
+              "name": "Product: HOLOGRAPHIC STICKER SHEET",
+              "width": 270,
+              "height": 420,
+              "fill": "$white",
+              "cornerRadius": 12,
+              "stroke": "$black",
+              "strokeWidth": 4,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 6,
+                  "y": 6
+                }
+              },
+              "layout": "vertical",
+              "padding": 18,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jJxsY",
+                  "name": "Item Preview Box",
+                  "width": "fill_container",
+                  "height": 200,
+                  "fill": "$brandAqua",
+                  "cornerRadius": 8,
+                  "stroke": "$black",
+                  "strokeWidth": 2,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "AfKXu",
+                      "name": "Item Icon",
+                      "width": 48,
+                      "height": 48,
+                      "icon": "box",
+                      "library": "lucide",
+                      "fill": "$black"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YUecW",
+                      "name": "Preview Label",
+                      "fill": "$black",
+                      "content": "BESTSELLER",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jOZwR",
+                  "name": "Product Title",
+                  "fill": "$black",
+                  "content": "HOLOGRAPHIC STICKER SHEET",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "wXfNP",
+                  "name": "Price Tag",
+                  "fill": "$brandPink",
+                  "content": "$09.00",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "NC7Al",
+                  "name": "Add to Bag Button",
+                  "width": "fill_container",
+                  "fill": "$black",
+                  "cornerRadius": 6,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Mz36E",
+                      "name": "Buy Text",
+                      "fill": "$brandYellow",
+                      "content": "PURCHASE ITEM",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "D5qRm",
+          "x": 930,
+          "y": 130,
+          "name": "Newsletter Terminal Card",
+          "width": 470,
+          "height": 440,
+          "fill": "#14141E",
+          "cornerRadius": 16,
+          "stroke": "$brandGreen",
+          "strokeWidth": 4,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$brandGreen",
+            "offset": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "layout": "vertical",
+          "padding": 28,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "i8oiK",
+              "name": "News Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E0L2gD",
+                  "name": "Terminal Title",
+                  "fill": "$brandGreen",
+                  "content": "JOIN THE NEPO BABY DISPATCH",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 22,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "Fzrzv",
+                  "name": "Terminal Sub",
+                  "fill": "$white",
+                  "content": "Sign up for secret gallery drops, Three.js source files, and upcoming issue launches.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Nknz2",
+              "name": "Email Input Box",
+              "width": "fill_container",
+              "height": 52,
+              "fill": "$white",
+              "cornerRadius": 8,
+              "stroke": "$black",
+              "strokeWidth": 3,
+              "padding": [
+                10,
+                16
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GyQsK",
+                  "name": "Input Placeholder",
+                  "fill": "#777777",
+                  "content": "your.handle@nepobaby.xyz",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon",
+                  "id": "PcprD",
+                  "name": "At Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "send",
+                  "library": "lucide",
+                  "fill": "$black"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g1HV0y",
+              "name": "Submit Newsletter Button",
+              "width": "fill_container",
+              "fill": "$brandYellow",
+              "cornerRadius": 999,
+              "stroke": "$black",
+              "strokeWidth": 3,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$black",
+                "offset": {
+                  "x": 4,
+                  "y": 4
+                }
+              },
+              "padding": [
+                14,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HTFTq",
+                  "name": "Submit Label",
+                  "fill": "$black",
+                  "content": "TRANSMIT TO DISPATCH LIST",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "900"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ULpTj",
+      "x": 0,
+      "y": 2000,
+      "name": "Mobile - Lobby",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#0B0B10",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "yZTsy",
+          "x": 16,
+          "y": 20,
+          "name": "Mobile Header",
+          "width": 358,
+          "height": 52,
+          "fill": "$black",
+          "cornerRadius": 8,
+          "stroke": "$brandGreen",
+          "strokeWidth": 2,
+          "padding": [
+            8,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "xKyvq",
+              "name": "[LOGO SLOT]",
+              "fill": "$brandPink",
+              "cornerRadius": 4,
+              "padding": [
+                4,
+                8
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AR4Eq",
+                  "name": "Logo Text",
+                  "fill": "$white",
+                  "content": "NEPO BABY",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 11,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ciDNy",
+              "name": "Pavilion Title",
+              "fill": "$brandYellow",
+              "content": "MUSEUM 3D",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "bold"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E1droT",
+          "x": 55,
+          "y": 340,
+          "name": "Mobile Plinth",
+          "width": 280,
+          "height": 200,
+          "fill": "$white",
+          "stroke": "$black",
+          "strokeWidth": 4,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$black",
+            "offset": {
+              "x": 6,
+              "y": 6
+            }
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "CaHLM",
+          "x": 85,
+          "y": 190,
+          "name": "Mobile Vitrine",
+          "width": 220,
+          "height": 160,
+          "fill": "#5CE1E622",
+          "stroke": "$brandAqua",
+          "strokeWidth": 2,
+          "layout": "vertical",
+          "gap": 8,
+          "justifyContent": "center",
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "Q41TiM",
+          "x": 45,
+          "y": 680,
+          "name": "Mobile Scroll CTA",
+          "width": 300,
+          "height": 48,
+          "fill": "$brandGreen",
+          "cornerRadius": 999,
+          "stroke": "$black",
+          "strokeWidth": 2,
+          "gap": 8,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mdI0q",
+              "name": "CTA Text",
+              "fill": "$black",
+              "content": "SWIPE DOWN TO ENTER",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "y8BKcV",
+      "x": 450,
+      "y": 2000,
+      "name": "Mobile - Wing Hallway",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#08080C",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "C0MY4m",
+          "x": 16,
+          "y": 20,
+          "name": "Hallway Status Pill",
+          "width": 358,
+          "height": 44,
+          "fill": "$black",
+          "cornerRadius": 8,
+          "stroke": "$brandGreen",
+          "strokeWidth": 2,
+          "padding": [
+            8,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sP2Vw",
+              "name": "Wing Label",
+              "fill": "$brandGreen",
+              "content": "WING A: LOANS • 01/11",
+              "fontFamily": "Space Mono",
+              "fontSize": 11,
+              "fontWeight": "bold"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VYb3l",
+          "x": 75,
+          "y": 120,
+          "name": "Mobile Mag Preview",
+          "width": 240,
+          "height": 240,
+          "fill": "$brandPink",
+          "cornerRadius": 8,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "padding": 16,
+          "justifyContent": "space_between"
+        },
+        {
+          "type": "frame",
+          "id": "rJbKE",
+          "x": 115,
+          "y": 330,
+          "name": "Mobile Test CTA",
+          "width": 160,
+          "height": 44,
+          "fill": "$brandYellow",
+          "cornerRadius": 999,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "gap": 6,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jHXHl",
+              "name": "CTA Label",
+              "fill": "$black",
+              "content": "TEST IT NOW",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "bold"
+            }
+          ]
+        },
+        {
+          "id": "judzp",
+          "type": "ref",
+          "ref": "H3tUL",
+          "x": 35,
+          "y": 420,
+          "width": 320,
+          "name": "Mobile Wall Plaque"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "F9EacH",
+      "x": 900,
+      "y": 2000,
+      "name": "Mobile - Exhibit Focus Mode",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#050508",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "j5cgM",
+          "x": 16,
+          "y": 20,
+          "name": "Mobile Focus Header",
+          "width": 358,
+          "height": 48,
+          "fill": "$black",
+          "cornerRadius": 8,
+          "stroke": "$brandAqua",
+          "strokeWidth": 2,
+          "padding": [
+            8,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Uv9GM",
+              "name": "Focus Title",
+              "fill": "$brandAqua",
+              "content": "TESTING #01",
+              "fontFamily": "Space Mono",
+              "fontSize": 12,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "H5cOa",
+              "name": "Mobile Back Button",
+              "fill": "$brandPink",
+              "cornerRadius": 6,
+              "padding": [
+                4,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IWlfz",
+                  "name": "Back Label",
+                  "fill": "$white",
+                  "content": "✕ EXIT",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 11,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GLfAP",
+          "x": 20,
+          "y": 80,
+          "name": "Mobile Focus Viewport",
+          "width": 350,
+          "height": 350,
+          "fill": "#101018",
+          "cornerRadius": 12,
+          "stroke": "$brandAqua",
+          "strokeWidth": 2,
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "rMgf5",
+          "x": 20,
+          "y": 445,
+          "name": "Mobile Control Pills",
+          "width": 350,
+          "height": 44,
+          "fill": "#181824",
+          "cornerRadius": 8,
+          "gap": 8,
+          "padding": [
+            6,
+            10
+          ],
+          "justifyContent": "space_around",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "oA19K",
+              "name": "Pill ROTATE 360",
+              "fill": "$brandYellow",
+              "cornerRadius": 4,
+              "padding": [
+                4,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hBMs8",
+                  "name": "Pill Text",
+                  "fill": "$black",
+                  "content": "ROTATE 360",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 10,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MYc4K",
+              "name": "Pill OPEN SPREAD",
+              "fill": "$brandYellow",
+              "cornerRadius": 4,
+              "padding": [
+                4,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Jgl52",
+                  "name": "Pill Text",
+                  "fill": "$black",
+                  "content": "OPEN SPREAD",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 10,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a19yF",
+              "name": "Pill RESET CAM",
+              "fill": "$brandYellow",
+              "cornerRadius": 4,
+              "padding": [
+                4,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "s9mIsW",
+                  "name": "Pill Text",
+                  "fill": "$black",
+                  "content": "RESET CAM",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 10,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iCUnk",
+          "x": 20,
+          "y": 505,
+          "name": "Mobile Test Notes",
+          "width": 350,
+          "height": 280,
+          "fill": "$white",
+          "cornerRadius": 8,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "eqaLO",
+              "name": "Instruct Title",
+              "fill": "$black",
+              "content": "TOUCH GESTURES",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 14,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "nDX3Y",
+              "name": "Instruct Body",
+              "fill": "$black",
+              "content": "• Drag 1 finger: Rotate magazine in 3D space.\n• Pinch 2 fingers: Zoom in / inspect typography.\n• Double tap: Flip to next magazine page.\n• Tap ✕ EXIT above to resume museum scroll.",
+              "lineHeight": 1.5,
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ckrRV",
+      "x": 1350,
+      "y": 2000,
+      "name": "Mobile - Gift Shop",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#0D0D14",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "exsWK",
+          "x": 16,
+          "y": 20,
+          "name": "Mobile Gift Header",
+          "width": 358,
+          "height": 50,
+          "fill": "$black",
+          "cornerRadius": 8,
+          "stroke": "$brandYellow",
+          "strokeWidth": 2,
+          "padding": [
+            8,
+            12
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "yVH8I",
+              "name": "Title",
+              "fill": "$brandYellow",
+              "content": "GIFT SHOP // DROP 04",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "900"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Grcjo",
+          "x": 20,
+          "y": 85,
+          "name": "Featured Merch Card",
+          "width": 350,
+          "height": 380,
+          "fill": "$white",
+          "cornerRadius": 12,
+          "stroke": "$black",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "padding": 16,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "d6qFb",
+              "name": "Featured Title",
+              "fill": "$black",
+              "content": "ISSUE #04 CASSETTE TAPE",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "VB3Xd",
+              "name": "Featured Price",
+              "fill": "$brandPink",
+              "content": "$18.00 • LIMITED DROP",
+              "fontFamily": "Space Mono",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "LaKxg",
+              "name": "Mobile Buy CTA",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$brandYellow",
+              "cornerRadius": 6,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RhXwb",
+                  "name": "CTA Label",
+                  "fill": "$black",
+                  "content": "ADD TO BAG",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gpYUe",
+          "x": 20,
+          "y": 490,
+          "name": "Mobile Newsletter Box",
+          "width": 350,
+          "height": 280,
+          "fill": "#14141E",
+          "cornerRadius": 12,
+          "stroke": "$brandGreen",
+          "strokeWidth": 3,
+          "layout": "vertical",
+          "padding": 18,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "jKRmd",
+              "name": "News Title",
+              "fill": "$brandGreen",
+              "content": "JOIN THE DISPATCH",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 16,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "Zkuzs",
+              "name": "News Sub",
+              "fill": "$white",
+              "content": "Get Three.js code files and drop alerts directly to your inbox.",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "XWcTk",
+              "name": "Submit CTA",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$brandGreen",
+              "cornerRadius": 999,
+              "stroke": "$black",
+              "strokeWidth": 2,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SJrRZ",
+                  "name": "Submit Text",
+                  "fill": "$black",
+                  "content": "SUBSCRIBE",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "brandGreen": {
+      "type": "color",
+      "value": "#BDFF52"
+    },
+    "brandPink": {
+      "type": "color",
+      "value": "#CF005E"
+    },
+    "brandPastelPink": {
+      "type": "color",
+      "value": "#FC94C3"
+    },
+    "brandAqua": {
+      "type": "color",
+      "value": "#5CE1E6"
+    },
+    "brandYellow": {
+      "type": "color",
+      "value": "#FFDE59"
+    },
+    "black": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    }
+  },
+  "fileToken": "b7f2f972-dca9-4cfa-86fb-748501e8156f"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Bombay Dusk Coupe",
+  "provenance": "Loan reconstruction placeholder awaiting direct coupe.json + coupe.bin asset drop",
+  "status": "procedural_reconstruction_fallback",
+  "chassis": {
+    "length": 4.6,
+    "width": 1.9,
+    "height": 1.25,
+    "color": "#CF005E",
+    "rimColor": "#FFDE59",
+    "glassColor": "#5CE1E6"
+  },
+  "wheels": [
+    { "position": [-0.85, 0.35, 1.4], "radius": 0.35 },
+    { "position": [0.85, 0.35, 1.4], "radius": 0.35 },
+    { "position": [-0.85, 0.35, -1.4], "radius": 0.35 },
+    { "position": [0.85, 0.35, -1.4], "radius": 0.35 }
+  ]
+}
